@@ -7,7 +7,7 @@ node ('Maven') {
    
    stage ('build the packages') {
       // mvn package
-   sh 'mvn package'
+   sh '/opt/apache-maven-3.8.7/bin/mvn package'
    }
    
    stage ('archival') {
