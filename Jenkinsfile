@@ -7,11 +7,11 @@ node ('Maven') {
    
    stage ('build the packages') {
       // mvn package
-   sh '/opt/apache-maven-3.8.7/bin/mvn package'
+   sh 'mvn package'
    }
    
    stage ('archival') {
      // archiving artifacts
-   archive 'target/*.jar'
+   archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
    }
 }
